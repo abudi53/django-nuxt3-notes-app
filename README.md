@@ -1,0 +1,1 @@
+# django-nuxt3-notes-app
