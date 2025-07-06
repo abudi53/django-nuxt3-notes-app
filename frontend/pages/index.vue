@@ -32,7 +32,8 @@ function formatDate(dateString: string) {
 
     <!-- 3. Success State (with notes) -->
     <div v-else-if="notes && notes.length" class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-      <Card v-for="note in notes" :key="note.id">
+      <NuxtLink v-for="note in notes" :key="note.id" :to="`/notes/${note.id}`">
+      <Card>
         <CardHeader>
           <CardTitle>{{ note.title }}</CardTitle>
         </CardHeader>
@@ -45,6 +46,7 @@ function formatDate(dateString: string) {
           <p>Last updated: {{ formatDate(note.updated_at) }}</p>
         </CardFooter>
       </Card>
+      </NuxtLink>
     </div>
 
     <!-- 4. Success State (no notes) -->
