@@ -14,8 +14,18 @@ async function createNote() {
   errorMessage.value = '';
 
   // Basic validation
-  if (!title.value.trim() || !content.value.trim()) {
-    errorMessage.value = 'Title and content cannot be empty.';
+  if (!title.value.trim() && !content.value.trim()) {
+    errorMessage.value = 'You must provide a title and content.';
+    return;
+  }
+
+  if (!title.value.trim()) {
+    errorMessage.value = 'You must provide a title.';
+    return;
+  }
+
+  if (!content.value.trim()) {
+    errorMessage.value = 'The content cannot be empty.';
     return;
   }
 
