@@ -115,3 +115,13 @@ For easier setup and deployment, I would containerize both the frontend and back
 Finally, I would deploy the application to a cloud provider:
 *   **Backend**: Use a service like Heroku, DigitalOcean, or AWS to host the Django API.
 *   **Frontend**: Deploy the Nuxt 3 app to Vercel, Netlify or Cloudflare Pages for easy static hosting and CDN distribution. 
+
+### 8. Backend Improvements
+
+*   **API Rate Limiting**: Implement rate limiting to prevent abuse of the API.
+*   **Logging and Monitoring**: Set up logging (using Django's built-in logging or a service like Sentry) to monitor errors and performance issues in production.
+*   **CORS Configuration**: Ensure proper CORS settings to allow the frontend to communicate with the backend securely.
+
+## What AI tools did I use?
+
+I used Gemini 2.5 pro to help mostly with the initial code generation and structuring (specially for the frontend). I also used it to help with the README file and some of the explanations. It had some trouble with the frontend setup, so I had to do it myself with the help of the Nuxt3 documentation. It also helped with the setup for the unit tests on the backend.
